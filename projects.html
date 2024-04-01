@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Agil's Portofolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="./node_modules/tailwindcss/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link href="./src/output.css" rel="stylesheet" />
+
+    <style>
+      /* CSS untuk tautan navigasi aktif */
+      nav a.active {
+        border-bottom: 2px solid white;
+      }
+    </style>
+  </head>
+  <body class="bg-slate-800 w-screen h-screen">
+    <nav class="flex justify-between px-20 py-5 text-center items-center">
+      <div>
+        <a href="">
+          <p
+            class="text-2xl font-bold text-white"
+            style="font-family: sans-serif"
+          >
+            AGILAR GUMILAR
+          </p>
+        </a>
+      </div>
+      <div>
+        <ul class="flex space">
+          <li class="px-5">
+            <a
+              href="index.html"
+              class="text-white border-b-2 border-transparent hover:border-white"
+              >Home</a
+            >
+          </li>
+          <li class="px-5">
+            <a
+              href="about.html"
+              class="text-white border-b-2 border-transparent hover:border-white"
+              >About</a
+            >
+          </li>
+          <li class="px-5">
+            <a
+              href="contact.html"
+              class="text-white border-b-2 border-transparent hover:border-white"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="flex">
+      <div class="w-1/2 p-4">
+        <div class="flex justify-center items-center h-96">
+          <div class="text-center">
+            <h1 class="text-4xl text-white py-2">Welcome to my Portofolio</h1>
+            <p class="text-white text-3xl">I'm Agil, a web developer</p>
+            <p class="text-xl text-white py-2">
+              I'm a web developer skilled in Laravel back-end development and
+              experienced in full-stack tasks. With a track record of diverse
+              projects, I excel in crafting high-quality solutions tailored to
+              each project's needs. Equipped with strong skills in both back-end
+              and front-end technologies, I'm ready to tackle any web
+              development challenge. Don't hesitate to contact me for inquiries
+              or project discussions.
+            </p>
+          </div>
+        </div>
+        <div class="flex justify-center items-center">
+          <a
+            href="https://www.linkedin.com/in/agilar-gumilar-9aa919239/"
+            target="_blank"
+          >
+            <img src="img/LinkedIn.png" alt="logo" class="w-20 h-20 mx-5" />
+          </a>
+
+          <a href="https://www.instagram.com/agilargmlr/" target="_blank">
+            <img src="img/Instagram.png" alt="logo" class="w-20 h-20 mx-5" />
+          </a>
+
+          <a href="https://github.com/Agilar011" target="_blank">
+            <img src="img/github.png" alt="logo" class="w-20 h-20 mx-5" />
+          </a>
+
+          <a
+            href="https://api.whatsapp.com/send/?phone=%2B6281232090819&text&type=phone_number&app_absent=0"
+            target="_blank"
+          >
+            <img src="img/Whatsapp.png" alt="logo" class="w-20 h-20 mx-5" />
+          </a>
+        </div>
+      </div>
+
+      <div class="flex w-1/2 p-4 justify-center items-center">
+        <img src="img/agil's img.JPG" alt="Profile" class="w-1/2 h-auto" />
+      </div>
+    </div>
+
+    <script>
+      // Mendapatkan path dari URL saat ini
+      var currentPath = window.location.pathname;
+
+      // Memilih semua elemen anchor di dalam navigasi
+      var navLinks = document.querySelectorAll("nav a");
+
+      // Loop melalui setiap elemen anchor dan periksa apakah href-nya sesuai dengan path saat ini
+      navLinks.forEach(function (link) {
+        if (link.pathname === currentPath) {
+          // Change here
+          // Tambahkan kelas Tailwind untuk menambahkan border bawah dan memberikan warna putih
+          link.classList.add("border-b-2", "border-white");
+        }
+      });
+    </script>
+  </body>
+</html>
